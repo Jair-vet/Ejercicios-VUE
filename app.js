@@ -13,6 +13,16 @@ const app = Vue.createApp({
     data() {
         return { 
             quotes,
+            newQuote: 'Escribe un Quote'
+        }
+    },
+
+    methods: {
+        addQuote( ) {
+
+            this.quotes.unshift({   // Agrega al arreglo al inicio del mismo  -> push() agrega pero al final
+                quote: this.newQuote
+            })
         }
     },
 
